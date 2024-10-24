@@ -1,0 +1,7 @@
+SELECT COUNT(*) AS COUNT
+FROM ECOLI_DATA
+WHERE BIN(GENOTYPE) & 2 = 0 AND BIN(GENOTYPE) & 5 != 0
+;
+
+# AND 비트연산의 경우
+# 1과 1이 아닌 이상 무조건 0을 출력함
