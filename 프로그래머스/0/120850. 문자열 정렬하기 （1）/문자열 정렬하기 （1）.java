@@ -1,20 +1,12 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 
 class Solution {
     public int[] solution(String my_string) {
-        ArrayList<Integer> al = new ArrayList<>();
+        String temp = my_string.replaceAll("[a-z]","");
         
-        for(int i = 0; i < my_string.length(); i++){
-            if(Character.isDigit(my_string.charAt(i))){
-                al.add((int) my_string.charAt(i) - 48);
-            }
-        }
-        
-        int size = al.size();
-        int[] answer = new int[size];
-        for(int i = 0; i < size; i++){
-            answer[i] = al.get(i);
+        int[] answer = new int[temp.length()];
+        for(int i = 0; i < temp.length(); i++){
+            answer[i] = temp.charAt(i) - '0';
         }
         
         Arrays.sort(answer);
