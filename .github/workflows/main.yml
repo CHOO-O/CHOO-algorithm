@@ -1,4 +1,4 @@
-name: dispatch-workflow
+name: dispatch_action
 
 on:
  push:
